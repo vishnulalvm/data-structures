@@ -1,5 +1,5 @@
 int missingNum(List<int>array){
-  for(int i=0; i<=array.length; i++){
+  for(int i=1; i<=array.length; i++){
     if(!array.contains(i)){
       return i;
     }

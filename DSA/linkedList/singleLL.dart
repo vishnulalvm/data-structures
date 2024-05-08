@@ -20,6 +20,43 @@ class SingleLL{
     tail =newNode;
   }
 
-  
+  void printLL(){
+    Node? temp =head;
+    
+    if(temp == null){
+      print('empty');
+    }
+    while(temp !=null){
+      print(temp.data);
+      temp =temp.next;
+    }
+  }
+  int sumOfList(Node? head){
+    if(head==null){
+      return 0;
+    }
+    int? currentValue = head.data;
+    int? remioningSum =sumOfList(head.next);
+    return currentValue! + remioningSum;
+  }
+  int printRev(int n)
+  {
+    if(n==1){
+      return 0;
+    }
+    return 0;
+  }
+
+}
+
+void main(){
+  SingleLL list = SingleLL();
+  list.addNode(10);
+  list.addNode(20);
+  list.addNode(30);
+  list.addNode(40);
+  list.addNode(50);
+  list.printLL();
+  print(list.sumOfList(list.head));
 
 }
