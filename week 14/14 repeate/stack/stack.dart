@@ -67,6 +67,12 @@ class Stack{
 
     }
   }
+  void peek(){
+    Node? top = this.top;
+    if(top != null){
+      print("top ${top.data}");
+    }
+  }
 
   void printRev(Node? node){
     if(node == null){
